@@ -7,10 +7,10 @@
     "node": "16.13.0"
   },
   "scripts": {
-    "test": "NODE_ENV=local mocha",
-    "test:qa": "NODE_ENV=qa mocha",
-    "generate:report": "NODE_ENV=local mocha --reporter mochawesome || true",
-    "generate:report:qa": "NODE_ENV=qa mocha --reporter mochawesome || true",
+    "test": "NODE_ENV=local mocha --timeout 0s",
+    "test:qa": "NODE_ENV=qa mocha --timeout 0s",
+    "generate:report": "NODE_ENV=local mocha --timeout 0s --reporter mochawesome || true",
+    "generate:report:qa": "NODE_ENV=qa mocha --timeout 0s --reporter mochawesome || true",
     "open:report": "open mochawesome-report/mochawesome.html",
     "lint": "eslint . --max-warnings 0 -f html -o eslint-report.html",
     "lint-fix": "eslint . --fix",
